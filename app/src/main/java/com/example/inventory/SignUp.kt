@@ -56,9 +56,50 @@ class SignUp : AppCompatActivity() {
         limitDropDownHeight(spnTest)
 
     }
+    private fun nameFocusListener()
+    {
+        binding.nameEt.setOnFocusChangeListener{_, focused->
+            if(!focused)
+            {
+                binding.nameReq.helperText=validname()
+            }
+
+        }
+    }
+
+    private fun validname(): String?
+    {
+        val passwordText = binding.nameEt.text.toString()
+        if(passwordText.length <= 0)
+        {
+            return "name is required"
+        }
+        return null
 
 
+    }
+  private fun designationFocusListener()
+    {
+        binding.designationEt.setOnFocusChangeListener{_, focused->
+            if(!focused)
+            {
+                binding.nameReq.helperText=validdesignation()
+            }
 
+        }
+    }
+
+    private fun validdesignation(): String?
+    {
+        val passwordText = binding.nameEt.text.toString()
+        if(passwordText.length <= 0)
+        {
+            return "designation is required"
+        }
+        return null
+
+
+    }
     private fun signUpForm() {
         binding.emailReq.helperText = validEmail()
         binding.pReq.helperText = validPhoneNumber()
