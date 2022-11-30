@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.fragment_employee.*
 
 class FragmentOne : Fragment() {
     private var empDetails: ArrayList<EmployeeData>? = null
-    private var searchEmpDetails: ArrayList<EmployeeData>? = null
+//    private var searchEmpDetails: ArrayList<EmployeeData>? = null
     private var EmployeeAdapter: EmpRecyclerViewAdapter?=null
 
     override fun onCreateView(
