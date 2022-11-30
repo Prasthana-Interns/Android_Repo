@@ -1,40 +1,73 @@
 package com.example.inventory
 
+import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import com.example.inventory.databinding.ActivityMain2Binding
+import com.example.inventory.databinding.ActivityMainBinding
+import com.example.inventory.ForgotPassword
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityMain2Binding
-
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
 
-        binding = ActivityMain2Binding.inflate(layoutInflater)
-        setContentView(binding.root)
+        forgotPassBtn.setOnClickListener {
+            val intent = Intent(this, ForgotPassword::class.java)
+            startActivity(intent)
+        }
 
-        setSupportActionBar(binding.toolbar)
+        sign_Up.setOnClickListener {
+            val intent = Intent(this, SignUp::class.java)
+            startActivity(intent)
+        }
 
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
+    }
+    private fun passwordFocusListener()
+    {
+        binding.passwordTv.setOnFocusChangeListener{_, focused->
+            if(!focused)
+            {
+                binding.pass1Req.helperText=validPassword()
+            }
 
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
         }
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
+    private fun validPassword(): String?
+    {
+        val passwordText = binding.passwordTv.text.toString()
+        if(passwordText.length < 4)
+        {
+            return "Minimum 8 characters password"
+        }
+        return null
+
+
     }
+    private fun empIdFocusListener()
+    {
+        binding.empIdTv.setOnFocusChangeListener{_, focused->
+            if(!focused)
+            {
+                binding.empReq.helperText=validEmpId()
+            }
+
+        }
+    }
+
+    private fun validEmpId(): String?
+    {
+        val empIdText = binding.empIdTv.text.toString()
+        if(empIdText.length < 4)
+        {
+            return "Minimum 4 characters password"
+        }
+        return null
+
+
+    }
+
 }
