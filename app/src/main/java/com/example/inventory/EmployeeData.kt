@@ -8,14 +8,16 @@ data class EmployeeData(
     var name:String?,
     var designation:String?,
     var phoneNumber:Int?,
-    var email:String?
+    var email:String?,
+    var devices:Array<String>?
 ):Parcelable{
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readValue(Int::class.java.classLoader) as? Int,
-        parcel.readString()
+        parcel.readString(),
+        parcel.createStringArray()
     ) {
     }
 
@@ -25,6 +27,7 @@ data class EmployeeData(
         parcel.writeString(designation)
         parcel.writeValue(phoneNumber)
         parcel.writeString(email)
+        parcel.writeStringArray(devices)
     }
 
     override fun describeContents(): Int {

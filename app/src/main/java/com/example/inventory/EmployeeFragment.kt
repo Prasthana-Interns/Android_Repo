@@ -28,18 +28,90 @@ class FragmentOne : Fragment() {
 
         empDetails=ArrayList()
 
-        empDetails?.add(EmployeeData("EmpId-001","Praneeth Sangita","Developer",967617464,"praneethsangita@gmail.com"))
-        empDetails?.add(EmployeeData("EmpId-002","Krishna Sangita","Developer",967617464,"praneethsangita@gmail.com"))
-        empDetails?.add(EmployeeData("EmpId-003","Laya Boini","Developer",967617464,"praneethsangita@gmail.com"))
-        empDetails?.add(EmployeeData("EmpId-004","Hari Krishna","Developer",967617464,"praneethsangita@gmail.com"))
-        empDetails?.add(EmployeeData("EmpId-005","Mayur chowhan","Developer",967617464,"praneethsangita@gmail.com"))
-        empDetails?.add(EmployeeData("EmpId-006","Chaitanya BalaNagu","Developer",967617464,"praneethsangita@gmail.com"))
-        empDetails?.add(EmployeeData("EmpId-001","Praneeth Sangita","Developer",967617464,"praneethsangita@gmail.com"))
-        empDetails?.add(EmployeeData("EmpId-002","Krishna Sangita","Developer",967617464,"praneethsangita@gmail.com"))
-        empDetails?.add(EmployeeData("EmpId-003","Laya Boini","Developer",967617464,"praneethsangita@gmail.com"))
-        empDetails?.add(EmployeeData("EmpId-004","Hari Krishna","Developer",967617464,"praneethsangita@gmail.com"))
-        empDetails?.add(EmployeeData("EmpId-005","Mayur chowhan","Developer",967617464,"praneethsangita@gmail.com"))
-        empDetails?.add(EmployeeData("EmpId-006","Chaitanya BalaNagu","Developer",967617464,"praneethsangita@gmail.com"))
+        empDetails?.add(EmployeeData(
+            "EmpId-001",
+            "Praneeth Sangita",
+            "Developer",
+            967617464,
+            "praneethsangita@gmail.com",
+            arrayOf("Laptop","Bag")
+        ))
+        empDetails?.add(EmployeeData(
+            "EmpId-002",
+            "Krishna Sangita",
+            "Developer",
+            967617464,
+            "praneethsangita@gmail.com",
+            arrayOf("Laptop","Bag")))
+        empDetails?.add(EmployeeData(
+            "EmpId-003",
+            "Laya Boini",
+            "Developer",
+            967617464,
+            "praneethsangita@gmail.com",
+            arrayOf("Laptop","Bag")))
+        empDetails?.add(EmployeeData(
+            "EmpId-004",
+            "Hari Krishna",
+            "Developer",
+            967617464,
+            "praneethsangita@gmail.com",
+            arrayOf("Laptop","Bag")))
+        empDetails?.add(EmployeeData(
+            "EmpId-005",
+            "Mayur chowhan",
+            "Developer",
+            967617464,
+            "praneethsangita@gmail.com",
+            arrayOf("Laptop","Bag")))
+        empDetails?.add(EmployeeData(
+            "EmpId-006",
+            "Chaitanya BalaNagu",
+            "Developer",
+            967617464,
+            "praneethsangita@gmail.com",
+            arrayOf("Laptop","Bag")))
+        empDetails?.add(EmployeeData(
+            "EmpId-001",
+            "Praneeth Sangita",
+            "Developer",
+            967617464,
+            "praneethsangita@gmail.com",
+            arrayOf("Laptop","Bag")))
+        empDetails?.add(EmployeeData(
+            "EmpId-002",
+            "Krishna Sangita",
+            "Developer",
+            967617464,
+            "praneethsangita@gmail.com",
+            arrayOf("Laptop","Bag")))
+        empDetails?.add(EmployeeData("EmpId-003",
+            "Laya Boini",
+            "Developer",
+            967617464,
+            "praneethsangita@gmail.com",
+            arrayOf("Laptop","Bag")))
+        empDetails?.add(EmployeeData(
+            "EmpId-004",
+            "Hari Krishna",
+            "Developer",
+            967617464,
+            "praneethsangita@gmail.com",
+            arrayOf("Laptop","Bag")))
+        empDetails?.add(EmployeeData(
+            "EmpId-005",
+            "Mayur chowhan",
+            "Developer",
+            967617464,
+            "praneethsangita@gmail.com",
+            arrayOf("Laptop","Bag")))
+        empDetails?.add(EmployeeData(
+            "EmpId-006",
+            "Chaitanya BalaNagu",
+            "Developer",
+            967617464,
+            "praneethsangita@gmail.com",
+            arrayOf("Laptop","Bag")))
 
         EmployeeAdapter=EmpRecyclerViewAdapter(empDetails!!)
         recyclerView.adapter=EmployeeAdapter

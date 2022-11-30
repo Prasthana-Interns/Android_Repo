@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.employee_tab_view.view.*
+import java.util.*
 
 class EmpRecyclerViewAdapter(var empList:List<EmployeeData>): RecyclerView.Adapter<EmpRecyclerViewAdapter.myViewHolder>() {
 
@@ -30,15 +31,16 @@ class EmpRecyclerViewAdapter(var empList:List<EmployeeData>): RecyclerView.Adapt
         holder.empId.text=empList[position].empId.toString()
         holder.empName.text=empList[position].name.toString()
         holder.designation.text=empList[position].designation.toString()
-        holder.nameIcon.text=customIcon(empList[position].name.toString()).toUpperCase()
-        holder.itemView.setOnClickListener{
+        holder.nameIcon.text=customIcon(empList[position].name.toString()).uppercase()
+        holder.nxtBtn.setOnClickListener{
             val intent=Intent(holder.itemView.context,EmpDetailsScreen::class.java)
             intent.putExtra("id",empList[position].empId)
             intent.putExtra("name",empList[position].name)
             intent.putExtra("email",empList[position].email)
             intent.putExtra("phNum",empList[position].phoneNumber)
             intent.putExtra("designation",empList[position].designation)
-            intent.putExtra("nameIcon",customIcon(empList[position].name.toString()).toUpperCase())
+            intent.putExtra("nameIcon",customIcon(empList[position].name.toString()).uppercase())
+            intent.putExtra("devices",empList[position].devices)
             holder.itemView.context.startActivity(intent)
         }
     }
