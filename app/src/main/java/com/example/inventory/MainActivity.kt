@@ -1,10 +1,12 @@
 package com.example.inventory
 
 import android.content.Intent
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+
 import com.example.inventory.databinding.ActivityMainBinding
 import com.example.inventory.ForgotPassword
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -13,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
+        passwordFocusListener()
+        empIdFocusListener()
 
         forgotPassBtn.setOnClickListener {
             val intent = Intent(this, ForgotPassword::class.java)
@@ -24,6 +28,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        tv.setOnClickListener {
+            val intent= Intent(this,AdminScreenOne::class.java)
+            startActivity(intent)
+        }
     }
     private fun passwordFocusListener()
     {

@@ -23,4 +23,6 @@
     <string name="roleReq"></string>
     <string name="empReq" />
     <string name="pass1Req" />
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
