@@ -1,9 +1,11 @@
 package com.example.inventory
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.inventory.databinding.ActivityAdminScreenOneBinding
 import com.google.android.material.tabs.TabLayoutMediator
+import kotlinx.android.synthetic.main.activity_admin_screen_one.*
 
 var binding: ActivityAdminScreenOneBinding?=null
 
@@ -27,5 +29,10 @@ class AdminScreenOne : AppCompatActivity() {
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = fragmentsArray[position]
         }.attach()
+
+        backBtn.setOnClickListener {
+            val intent=Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
