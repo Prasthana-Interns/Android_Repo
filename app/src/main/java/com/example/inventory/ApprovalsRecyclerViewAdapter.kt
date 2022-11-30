@@ -7,12 +7,14 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.approvals_tab_view.view.*
 
-class ApprovalsRecyclerViewAdapter(var approvalList:List<ApprovalsData>): RecyclerView.Adapter<ApprovalsRecyclerViewAdapter.myViewHolder>()  {
+class ApprovalsRecyclerViewAdapter(var approvalList:MutableList<ApprovalsData>): RecyclerView.Adapter<ApprovalsRecyclerViewAdapter.myViewHolder>()  {
     class myViewHolder(view: View): RecyclerView.ViewHolder(view){
         var apEmpId=view.apEmpId
         var apEmpName=view.apEmpName
         var apdesignation=view.apDesignation
         var apNameIcon=view.apNameIcon
+        var deleteBtn=view.rejectBtn
+        var acceptBtn=view.acceptBtn
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): myViewHolder {
@@ -25,6 +27,10 @@ class ApprovalsRecyclerViewAdapter(var approvalList:List<ApprovalsData>): Recycl
         holder.apEmpName.text=approvalList[position].apName.toString()
         holder.apdesignation.text=approvalList[position].apDesignation.toString()
         holder.apNameIcon.text=customIcon(approvalList[position].apName.toString()).uppercase()
+        holder.deleteBtn.setOnClickListener {
+            approvalList.remove(approvalList[position])
+            notifyDataSetChanged()
+        }
     }
 
     override fun getItemCount(): Int {

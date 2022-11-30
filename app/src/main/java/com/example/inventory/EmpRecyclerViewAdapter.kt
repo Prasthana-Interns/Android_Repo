@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.employee_tab_view.view.*
 import java.util.*
 
-class EmpRecyclerViewAdapter(var empList:List<EmployeeData>): RecyclerView.Adapter<EmpRecyclerViewAdapter.myViewHolder>() {
+class EmpRecyclerViewAdapter(var empList:MutableList<EmployeeData>): RecyclerView.Adapter<EmpRecyclerViewAdapter.myViewHolder>() {
 
     class myViewHolder(view: View): RecyclerView.ViewHolder(view) {
         var empId:TextView=view.empId

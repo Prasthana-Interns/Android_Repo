@@ -42,6 +42,52 @@ class FragmentThree : Fragment() {
             "900645999",
             "chaitanya@gmail.com"
         ))
+        approvalsEmployeeDetails?.add(ApprovalsData(
+            "EMPID-401",
+            "Danniel Jacob",
+            "Developer",
+            "9676174645",
+            "danny@gmail.com"))
+        approvalsEmployeeDetails?.add(ApprovalsData(
+            "EMPID-420",
+            "Chaitanya Gupta",
+            "Developer",
+            "900645999",
+            "chaitanya@gmail.com"
+        ))
+        approvalsEmployeeDetails?.add(ApprovalsData(
+            "EMPID-401",
+            "Danniel Jacob",
+            "Developer",
+            "9676174645",
+            "danny@gmail.com"))
+        approvalsEmployeeDetails?.add(ApprovalsData(
+            "EMPID-420",
+            "Chaitanya Gupta",
+            "Developer",
+            "900645999",
+            "chaitanya@gmail.com"
+        ))
+        approvalsEmployeeDetails?.add(ApprovalsData(
+            "EMPID-401",
+            "Danniel Jacob",
+            "Developer",
+            "9676174645",
+            "danny@gmail.com"))
+        approvalsEmployeeDetails?.add(ApprovalsData(
+            "EMPID-420",
+            "Chaitanya Gupta",
+            "Developer",
+            "900645999",
+            "chaitanya@gmail.com"
+        ))
+        approvalsEmployeeDetails?.add(ApprovalsData(
+            "EMPID-401",
+            "Danniel Jacob",
+            "Developer",
+            "9676174645",
+            "danny@gmail.com"))
+
 
         approvalAdapter=ApprovalsRecyclerViewAdapter(approvalsEmployeeDetails!!)
         apRecyclerView.adapter=approvalAdapter
