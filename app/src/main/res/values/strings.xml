@@ -1,5 +1,45 @@
 <resources>
     <string name="app_name">Inventory</string>
+    <string name="sign_up">Sign_Up</string>
+    <string name="text">Enter your email address and we’ll send you a link to get back into your account.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="roles">
+        <item>admin</item>
+        <item>employee</item>
+    </string-array>
+    <string name="title_activity_main">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="nameReq"></string>
+    <string name="emailReq"></string>
+    <string name="pReq"></string>
+    <string name="dReq"></string>
+    <string name="roleReq"></string>
+    <string name="empReq" />
+    <string name="pass1Req" />
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="log">log in to your account</string>
+    <string name="emp">EMP-ID</string>
+    <string name="pwd">password</string>
+    <string name="sig">Sign_Up</string>
+    <string name="Fp">Forgot Password?</string>
+    <string name="nac">Need An Account?</string>
+    <string name="name">Name:</string>
+    <string name="Email">Email:</string>
+    <string name="PNo">PhoneNumber</string>
+    <string name="phoneNo">PhoneNumber</string>
+    <string name="d">Designation</string>
+    <string name="role">Role</string>
+    <string name="trouble">Trouble with logging in ?</string>
+    <string name="Emailid">Email-Id</string>
+    <string name="send">send</string>
+    <string name="btl">Back to Login?</string>
+    <string name="search">Search</string>
 </resources>

@@ -1,19 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/inventory1"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        />
     <TextView
         android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/log"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="56dp"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/empIdTv"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:hint="@string/emp"
+        android:textColorHint="#8A8F93"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="27dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/emp_id_bg"
+        android:inputType="text"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/empReq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:helperText="@string/empReq"
+        app:helperTextTextColor="#FFEA0E0E"
+        android:layout_marginLeft="55dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/passwordTv"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="@string/pwd"
+        android:textColorHint="#8A8F93"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:paddingLeft="15dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/emp_id_bg"
+        android:inputType="textPassword"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pass1Req"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:helperText="@string/pass1Req"
+        app:helperTextTextColor="#FFEA0E0E"
+        android:layout_marginLeft="55dp"/>
+
+    <Button
+        android:id="@+id/signinBtn"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/selected_tab"
+        android:text="@string/sig"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textAllCaps="false"
+        />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/forgotPassBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:text="@string/Fp"
+            android:textColor="#0038FF"
+            android:textSize="15sp"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="100dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:text="@string/nac"
+            android:textColor="#0038FF"
+            android:textSize="15sp"
+            android:gravity="center"/>
+        <TextView
+            android:id="@+id/sign_Up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:text="@string/sign_up"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:paddingStart="2dp"
+            android:gravity="right"/>
+    </LinearLayout>
+
+</LinearLayout>
