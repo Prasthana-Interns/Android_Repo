@@ -42,4 +42,10 @@
     <string name="send">send</string>
     <string name="btl">Back to Login?</string>
     <string name="search">Search</string>
+    <string name="laya">Laya Boini</string>
+    <string name="dn">Macbook Pro 13</string>
+    <string name="deviceType">laptop</string>
+    <string name="deviceTag">SDFG23456</string>
+    <string name="deviceOs">Mac OS</string>
+    <string name="aEmp">Assigned To Employee</string>
 </resources>
