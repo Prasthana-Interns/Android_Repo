@@ -7,6 +7,7 @@ import com.example.inventory.ForgotPassword
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.inventory.ConstantsValues.Companion.passwordValue
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -47,9 +48,9 @@ class MainActivity : AppCompatActivity() {
     private fun validPassword(): String?
     {
         val passwordText = binding.passwordTv.text.toString()
-        if(passwordText.length < 4)
+        if(passwordText.length < passwordValue)
         {
-            return "Minimum 8 characters password"
+            return "Minimum 2 characters password"
         }
         return null
 
@@ -69,7 +70,7 @@ class MainActivity : AppCompatActivity() {
     private fun validEmpId(): String?
     {
         val empIdText = binding.empIdTv.text.toString()
-        if(empIdText.length < 4)
+        if(empIdText.length < passwordValue)
         {
             return "Minimum 4 characters password"
         }

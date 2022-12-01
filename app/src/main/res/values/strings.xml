@@ -25,4 +25,21 @@
     <string name="pass1Req" />
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="log">log in to your account</string>
+    <string name="emp">EMP-ID</string>
+    <string name="pwd">password</string>
+    <string name="sig">Sign_Up</string>
+    <string name="Fp">Forgot Password?</string>
+    <string name="nac">Need An Account?</string>
+    <string name="name">Name:</string>
+    <string name="Email">Email:</string>
+    <string name="PNo">PhoneNumber</string>
+    <string name="phoneNo">PhoneNumber</string>
+    <string name="d">Designation</string>
+    <string name="role">Role</string>
+    <string name="trouble">Trouble with logging in ?</string>
+    <string name="Emailid">Email-Id</string>
+    <string name="send">send</string>
+    <string name="btl">Back to Login?</string>
+    <string name="search">Search</string>
 </resources>

@@ -8,6 +8,10 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.R
 import androidx.appcompat.app.AlertDialog
+import com.example.inventory.ConstantsValues.Companion.designationValue
+import com.example.inventory.ConstantsValues.Companion.nameValue
+import com.example.inventory.ConstantsValues.Companion.phoneNumberValue
+import com.example.inventory.ConstantsValues.Companion.spinnerHeightValue
 import com.example.inventory.databinding.ActivitySignUpBinding
 import kotlinx.android.synthetic.main.activity_sign_up.*
 import java.lang.reflect.Field
@@ -34,8 +38,7 @@ class SignUp : AppCompatActivity() {
 
 
         val list: MutableList<String> = ArrayList()
-//        for (i: Int in 1..2)
-//            list.add("admin $i")
+
         list.add("admin")
         list.add("employee")
         val adapter = ArrayAdapter(
@@ -69,8 +72,8 @@ class SignUp : AppCompatActivity() {
 
     private fun validname(): String?
     {
-        val passwordText = binding.nameEt.text.toString()
-        if(passwordText.length <= 0)
+        val nameText = binding.nameEt.text.toString()
+        if(nameText.length <= nameValue)
         {
             return "name is required"
         }
@@ -91,8 +94,8 @@ class SignUp : AppCompatActivity() {
 
     private fun validdesignation(): String?
     {
-        val passwordText = binding.nameEt.text.toString()
-        if(passwordText.length <= 0)
+        val designationText = binding.nameEt.text.toString()
+        if(designationText.length <= designationValue)
         {
             return "designation is required"
         }
@@ -172,7 +175,7 @@ class SignUp : AppCompatActivity() {
     private fun validPhoneNumber(): String?
     {
         val phoneNumberText=binding.phoneNumberEditText.text.toString()
-        if(phoneNumberText.length != 10)
+        if(phoneNumberText.length != phoneNumberValue)
 
         {
             return "Must be 10 digits"
@@ -185,7 +188,7 @@ class SignUp : AppCompatActivity() {
         val popup: Field = Spinner::class.java.getDeclaredField("mPopup")
         popup.isAccessible = true
         val popupWindow: ListPopupWindow = popup.get(spnTest) as ListPopupWindow
-        popupWindow.height = (200 * resources.displayMetrics.density).toInt()
+        popupWindow.height = (spinnerHeightValue * resources.displayMetrics.density).toInt()
     }
 
 }

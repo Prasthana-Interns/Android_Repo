@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="150dp"
-            android:text="Sign_Up"
+            android:text="@string/sign_up"
             android:textSize="16sp"
             android:textColor="@color/black"
             android:textStyle="bold" />
@@ -41,25 +41,17 @@
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="55dp"
         android:layout_marginBottom="-20dp"
-        android:text="Name:"
+        android:text="@string/name"
         android:textColor="@color/black"
         android:textStyle="bold" />
 
-    <!--    <com.google.android.material.textfield.TextInputLayout-->
-    <!--        android:id="@+id/emailContainer"-->
-    <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-    <!--        app:helperText="Reqruired"-->
-    <!--        app:helperTextTextColor="#FFEF0A0A"-->
-    <!--        android:layout_width="300dp"-->
-    <!--        android:layout_height="45dp">-->
-    <!--    </com.google.android.material.textfield.TextInputLayout>-->
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/nameEt"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:textSize="15sp"
-        android:hint="Name"
+        android:hint="@string/name"
         android:textColorHint="@color/black"
         android:paddingLeft="15dp"
         android:layout_marginTop="27dp"
@@ -82,7 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:text="Email:"
+        android:text="@string/Email"
         android:layout_marginBottom="-30dp"
         android:layout_marginTop="20dp"
         android:textStyle="bold"
@@ -94,7 +86,7 @@
 
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:hint="Email"
+        android:hint="@string/Email"
         android:textColorHint="@color/black"
         android:textSize="15sp"
         android:textColor="@color/black"
@@ -121,7 +113,7 @@
         android:layout_marginLeft="55dp"
         android:layout_marginBottom="-30dp"
         android:layout_marginTop="20dp"
-        android:text="Phone-No:"
+        android:text="@string/PNo"
         android:textStyle="bold"
         android:textColor="@color/black"/>
 
@@ -129,7 +121,7 @@
         android:id="@+id/phoneNumberEditText"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:hint="PhoneNumber"
+        android:hint="@string/phoneNo"
         android:textColorHint="@color/black"
         android:textSize="15sp"
         android:textColor="@color/black"
@@ -158,7 +150,7 @@
         android:layout_width="103dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:text="Designation:"
+        android:text="@string/d"
         android:layout_marginBottom="-30dp"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="55dp"
@@ -169,7 +161,7 @@
         android:id="@+id/designationEt"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:hint="Designation"
+        android:hint="@string/d"
         android:textColorHint="@color/black"
         android:textSize="15sp"
         android:textColor="@color/black"
@@ -193,7 +185,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:text="Role:"
+        android:text="@string/role"
         android:layout_marginBottom="-30dp"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="55dp"
