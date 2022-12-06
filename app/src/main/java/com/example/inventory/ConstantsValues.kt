@@ -7,5 +7,6 @@ class ConstantsValues {
         const val designationValue=0
         const val spinnerHeightValue=200
         const val phoneNumberValue=10
+        const val EMPIDVALUE=7
     }
 }

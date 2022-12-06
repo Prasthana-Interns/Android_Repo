@@ -5,23 +5,22 @@ import android.os.Parcelable
 
 data class DevicesData(
     var deviceName:String?,
-    var deviceAssignedTo:String?,
+    var click_here_to_assign:String?,
     var deviceType:String?,
     var deviceOperatingSystem: String?,
-    var deviceServiceTag:Int
+    var deviceServiceTag:String?
     ): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
-        (parcel.readValue(Int::class.java.classLoader) as? Int)!!,
+        parcel.readString(),
         ) {
     }
-
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(deviceName)
-        parcel.writeString(deviceAssignedTo)
+        parcel.writeString(click_here_to_assign)
         parcel.writeString(deviceType)
         parcel.writeString(deviceOperatingSystem)
         parcel.writeValue(deviceServiceTag)

@@ -80,15 +80,16 @@
             android:textColor="@color/ash"
             android:textSize="10sp"/>
 
-        <TextView
-            android:id="@+id/deviceAssignedTo"
+        <Button
+            android:id="@+id/click_here_to_assign"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="111dp"
             android:layout_marginTop="103dp"
             android:text="@string/aEmp"
             android:textColor="@color/ash"
-            android:textSize="10sp"/>
+            android:textSize="10sp"
+            tools:ignore="TouchTargetSizeCheck" />
 
 
 

@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.util.Patterns
 import android.view.View
 import android.widget.*
-import androidx.appcompat.R
 import androidx.appcompat.app.AlertDialog
 import com.example.inventory.ConstantsValues.Companion.designationValue
 import com.example.inventory.ConstantsValues.Companion.nameValue
@@ -21,8 +20,10 @@ class SignUp : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_sign_up)
+       nameFocusListener()
         emailFocusListener()
+        designationFocusListener()
         phoneNumberFocusListener()
         binding.signUpButton.setOnClickListener {
             signUpForm()
@@ -129,7 +130,7 @@ class SignUp : AppCompatActivity() {
     }
 
     private fun resetForm() {
-        var message=" "
+        var message=""
         message += "\nEmail: " + binding.emailEditText.text
         message += "\nPhoneNumber: "+ binding.phoneNumberEditText.text
         AlertDialog.Builder(this)

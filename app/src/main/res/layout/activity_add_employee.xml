@@ -4,42 +4,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white"
-    tools:context=".SignUp">
+    tools:context=".AddEmployee"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_margin="10dp"
+        android:elevation="30dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp">
 
         <Button
-            android:id="@+id/backToLogin2"
-            android:layout_width="15.62dp"
-            android:layout_height="29.92dp"
+            android:id="@+id/backToAdminScreen"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_gravity="top"
-            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="336dp"
+            android:layout_marginBottom="14.24dp"
             android:background="@drawable/back"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-
+            android:contentDescription="@android:string/yes"
+            tools:ignore="SpeakableTextPresentCheck"></Button>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="150dp"
-            android:text="@string/sign_up"
-            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="136dp"
+            android:layout_marginRight="136dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/AD"
             android:textColor="@color/black"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+    </androidx.cardview.widget.CardView>
 
-    </LinearLayout>
+
+    <TextView
+        android:layout_width="258dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="58dp"
+        android:layout_marginRight="59dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/EDOfEmp"
+        android:textAlignment="center"
+        android:textColor="@color/ash"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="55dp"
+        android:layout_marginLeft="58.7dp"
         android:layout_marginBottom="-20dp"
         android:text="@string/name"
         android:textColor="@color/black"
@@ -47,7 +67,7 @@
 
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/nameEt"
+        android:id="@+id/aEnameEt"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:textSize="15sp"
@@ -61,7 +81,7 @@
         android:inputType="text"
         />
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nameReq"
+        android:id="@+id/aENameReq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:helperText="@string/nameReq"
@@ -74,19 +94,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:text="@string/Email"
+        android:text="@string/AddEmail"
         android:layout_marginBottom="-30dp"
         android:layout_marginTop="20dp"
         android:textStyle="bold"
-        android:layout_marginLeft="55dp"
+        android:layout_marginLeft="58.7dp"
         android:textColor="@color/black"/>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/emailEditText"
-
+        android:id="@+id/aEEmailEt"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:hint="@string/Email"
+        android:hint="@string/AddEmail"
         android:textColorHint="@color/black"
         android:textSize="15sp"
         android:textColor="@color/black"
@@ -97,7 +116,7 @@
         android:inputType="textEmailAddress"
         />
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailReq"
+        android:id="@+id/aEEmailReq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:helperText="@string/emailReq"
@@ -110,18 +129,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:layout_marginLeft="55dp"
-        android:layout_marginBottom="-30dp"
+        android:layout_marginLeft="58.7dp"
         android:layout_marginTop="20dp"
-        android:text="@string/phoneNo"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        android:layout_marginBottom="-30dp"
+        android:text="@string/EmpDesignation"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/phoneNumberEditText"
+        android:id="@+id/aEDesignationEt"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:hint="@string/phoneNo"
+        android:hint="@string/EmpDesignation"
         android:textColorHint="@color/black"
         android:textSize="15sp"
         android:textColor="@color/black"
@@ -133,13 +152,11 @@
         />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/pReq"
+        android:id="@+id/aEDesignationReq"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="55dp"
         android:layout_marginRight="62dp"
-        app:counterEnabled="true"
-        app:counterMaxLength="10"
         app:helperText="@string/pReq"
         app:helperTextTextColor="#FFEA0E0E">
 
@@ -150,29 +167,29 @@
         android:layout_width="103dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:text="@string/d"
+        android:text="@string/phoneNo"
         android:layout_marginBottom="-30dp"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="55dp"
+        android:layout_marginLeft="58.7dp"
         android:textColor="@color/black"
         android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/designationEt"
+        android:id="@+id/aEPhoneEt"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:hint="@string/d"
+        android:hint="@string/phoneNo"
         android:textColorHint="@color/black"
         android:textSize="15sp"
         android:textColor="@color/black"
         android:paddingLeft="15dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="27dp"
         android:background="@drawable/emp_id_bg"
         android:inputType="text"
         />
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/dReq"
+        android:id="@+id/aEPhoneReq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:helperText="@string/dReq"
@@ -185,26 +202,40 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:text="@string/role"
-        android:layout_marginBottom="-30dp"
+        android:layout_marginLeft="58.7dp"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="55dp"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        android:layout_marginBottom="-30dp"
+        android:text="@string/empId"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
 
-    <androidx.appcompat.widget.AppCompatSpinner
-        android:id="@+id/spnTest"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/aEEMPIDEt"
         android:layout_width="300dp"
         android:layout_height="48dp"
+        android:hint="@string/empId"
+        android:textColorHint="@color/black"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:paddingLeft="15dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="32dp"
-        android:autofillHints="roles"
-        android:background="@drawable/spinner_bg"
-        android:paddingLeft="15dp"
-        android:spinnerMode="dropdown"
-        tools:ignore="SpeakableTextPresentCheck" />
+        android:background="@drawable/emp_id_bg"
+        android:inputType="text"
+        />
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/roleReq"
+        android:id="@+id/aEEMPIDReq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:helperText="@string/dReq"
+        app:helperTextTextColor="#FFEA0E0E"
+        android:layout_marginLeft="55dp">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/aERoleReq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:helperText="@string/roleReq"
@@ -212,26 +243,38 @@
         android:layout_marginLeft="55dp">
 
     </com.google.android.material.textfield.TextInputLayout>
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginLeft="58.7dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="-30dp"
+        android:text="@string/role"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spnTest"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/spinner_bg"
+        android:paddingLeft="15dp"
+        android:spinnerMode="dropdown"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
-        android:id="@+id/signUpButton"
+        android:id="@+id/addEmployeeBtn"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:background="@drawable/selected_tab"
-        android:text="@string/sign_up"
-        android:textColor="@color/white"/>
+        android:text="@string/Add"
+        android:textColor="@color/white" />
 
-    <Button
-        android:id="@+id/loginHere"
-        android:layout_width="300dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="32dp"
-        android:text="Already a member?Login here"
-        android:textAllCaps="false" />
+
 
 
 </LinearLayout>

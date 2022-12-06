@@ -9,8 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.fragment_employee.*
 
 class FragmentOne : Fragment() {
-    public var empDetails: ArrayList<EmployeeData>? = null
-//    private var searchEmpDetails: ArrayList<EmployeeData>? = null
+     var empDetails: ArrayList<EmployeeData>? = null
     private var EmployeeAdapter: EmpRecyclerViewAdapter?=null
 
     override fun onCreateView(

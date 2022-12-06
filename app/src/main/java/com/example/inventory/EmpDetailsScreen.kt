@@ -21,7 +21,5 @@ class EmpDetailsScreen : AppCompatActivity() {
             val intent=Intent(this,AdminScreenOne::class.java)
             startActivity(intent)
         }
-
-
     }
 }

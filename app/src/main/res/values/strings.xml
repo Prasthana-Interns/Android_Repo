@@ -14,8 +14,8 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!--    <string name="hello_first_fragment">Hello first fragment</string>-->
+    <!--    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>-->
     <string name="nameReq"></string>
     <string name="emailReq"></string>
     <string name="pReq"></string>
@@ -24,7 +24,7 @@
     <string name="empReq" />
     <string name="pass1Req" />
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
     <string name="log">log in to your account</string>
     <string name="emp">EMP-ID</string>
     <string name="pwd">password</string>
@@ -33,7 +33,6 @@
     <string name="nac">Need An Account?</string>
     <string name="name">Name:</string>
     <string name="Email">Email:</string>
-    <string name="PNo">PhoneNumber</string>
     <string name="phoneNo">PhoneNumber</string>
     <string name="d">Designation</string>
     <string name="role">Role</string>
@@ -47,5 +46,19 @@
     <string name="deviceType">laptop</string>
     <string name="deviceTag">SDFG23456</string>
     <string name="deviceOs">Mac OS</string>
-    <string name="aEmp">Assigned To Employee</string>
+    <string name="aEmp">Click here to assign </string>
+    <string name="AD">Add Device</string>
+    <string name="EDOfEmp">Enter details to add employee with his provided devices </string>
+    <string name="AssignedTo">Assigned To</string>
+    <string name="DeviceTypes">Device Type</string>
+    <string name="DeviceOs">OS</string>
+    <string name="DeviceServiceTag">Service Tag</string>
+    <string name="Add">Add</string>
+    <string name="AE">Add Employee</string>
+    <string name="AddEmail">Email</string>
+    <string name="EmpDesignation">Designation</string>
+    <string name="empId">EMP ID</string>
+    <string name="assign">Assign</string>
+    <string name="LB">LB</string>
+    <string name="sigin">Sign-In</string>
 </resources>

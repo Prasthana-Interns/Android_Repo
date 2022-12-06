@@ -1,45 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white"
-    tools:context=".SignUp">
+    tools:context=".AddDevice"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:elevation="100dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp">
 
         <Button
-            android:id="@+id/backToLogin2"
-            android:layout_width="15.62dp"
-            android:layout_height="29.92dp"
+            android:id="@+id/backToAdminScreen"
+            android:layout_width="21.62dp"
+            android:layout_height="38.92dp"
             android:layout_gravity="top"
-            android:layout_marginTop="10dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="336dp"
+            android:layout_marginBottom="14.24dp"
             android:background="@drawable/back"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
-
-
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"></Button>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="150dp"
-            android:text="@string/sign_up"
-            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="136dp"
+            android:layout_marginRight="136dp"
+            android:layout_marginTop="53dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/AD"
             android:textColor="@color/black"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+    </androidx.cardview.widget.CardView>
 
-    </LinearLayout>
+
+    <TextView
+        android:layout_width="258dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="58dp"
+        android:layout_marginRight="59dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/EDOfEmp"
+        android:textAlignment="center"
+        android:textColor="@color/ash"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="55dp"
+        android:layout_marginLeft="58.7dp"
         android:layout_marginBottom="-20dp"
         android:text="@string/name"
         android:textColor="@color/black"
@@ -47,7 +66,7 @@
 
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/nameEt"
+        android:id="@+id/deviceNameEt"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:textSize="15sp"
@@ -61,7 +80,7 @@
         android:inputType="text"
         />
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nameReq"
+        android:id="@+id/deviceNameReq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:helperText="@string/nameReq"
@@ -74,19 +93,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:text="@string/Email"
+        android:text="@string/AssignedTo"
         android:layout_marginBottom="-30dp"
         android:layout_marginTop="20dp"
         android:textStyle="bold"
-        android:layout_marginLeft="55dp"
+        android:layout_marginLeft="58.7dp"
         android:textColor="@color/black"/>
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/emailEditText"
-
+        android:id="@+id/deviceAssignedToEt"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:hint="@string/Email"
+        android:hint="@string/AssignedTo"
         android:textColorHint="@color/black"
         android:textSize="15sp"
         android:textColor="@color/black"
@@ -97,7 +115,7 @@
         android:inputType="textEmailAddress"
         />
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/emailReq"
+        android:id="@+id/deviceAssignedToReq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:helperText="@string/emailReq"
@@ -110,18 +128,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:layout_marginLeft="55dp"
-        android:layout_marginBottom="-30dp"
+        android:layout_marginLeft="58.7dp"
         android:layout_marginTop="20dp"
-        android:text="@string/phoneNo"
-        android:textStyle="bold"
-        android:textColor="@color/black"/>
+        android:layout_marginBottom="-30dp"
+        android:text="@string/DeviceTypes"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/phoneNumberEditText"
+        android:id="@+id/deviceTypeEditText"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:hint="@string/phoneNo"
+        android:hint="@string/DeviceTypes"
         android:textColorHint="@color/black"
         android:textSize="15sp"
         android:textColor="@color/black"
@@ -133,13 +151,11 @@
         />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/pReq"
+        android:id="@+id/deviceTypeReq"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="55dp"
         android:layout_marginRight="62dp"
-        app:counterEnabled="true"
-        app:counterMaxLength="10"
         app:helperText="@string/pReq"
         app:helperTextTextColor="#FFEA0E0E">
 
@@ -150,29 +166,29 @@
         android:layout_width="103dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:text="@string/d"
+        android:text="@string/DeviceOs"
         android:layout_marginBottom="-30dp"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="55dp"
+        android:layout_marginLeft="58.7dp"
         android:textColor="@color/black"
         android:textStyle="bold" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/designationEt"
+        android:id="@+id/osEt"
         android:layout_width="300dp"
         android:layout_height="48dp"
-        android:hint="@string/d"
+        android:hint="@string/DeviceOs"
         android:textColorHint="@color/black"
         android:textSize="15sp"
         android:textColor="@color/black"
         android:paddingLeft="15dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="27dp"
         android:background="@drawable/emp_id_bg"
         android:inputType="text"
         />
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/dReq"
+        android:id="@+id/osReq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:helperText="@string/dReq"
@@ -185,29 +201,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:text="@string/role"
+        android:text="@string/DeviceServiceTag"
         android:layout_marginBottom="-30dp"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="55dp"
+        android:layout_marginLeft="58.7dp"
         android:textStyle="bold"
         android:textColor="@color/black"/>
-
-    <androidx.appcompat.widget.AppCompatSpinner
-        android:id="@+id/spnTest"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/DeviceServiceTagEt"
         android:layout_width="300dp"
         android:layout_height="48dp"
+        android:hint="@string/DeviceServiceTag"
+        android:textColorHint="@color/black"
+        android:textSize="15sp"
+        android:textColor="@color/black"
+        android:paddingLeft="15dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="32dp"
-        android:autofillHints="roles"
-        android:background="@drawable/spinner_bg"
-        android:paddingLeft="15dp"
-        android:spinnerMode="dropdown"
-        tools:ignore="SpeakableTextPresentCheck" />
+        android:background="@drawable/emp_id_bg"
+        android:inputType="text"
+        />
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/roleReq"
+        android:id="@+id/serviceTagreq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:helperText="@string/roleReq"
+        app:helperText="@string/dReq"
         app:helperTextTextColor="#FFEA0E0E"
         android:layout_marginLeft="55dp">
 
@@ -215,23 +233,16 @@
 
 
     <Button
-        android:id="@+id/signUpButton"
+        android:id="@+id/addBtn"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:background="@drawable/selected_tab"
-        android:text="@string/sign_up"
+        android:text="@string/Add"
         android:textColor="@color/white"/>
 
-    <Button
-        android:id="@+id/loginHere"
-        android:layout_width="300dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="32dp"
-        android:text="Already a member?Login here"
-        android:textAllCaps="false" />
+
 
 
 </LinearLayout>

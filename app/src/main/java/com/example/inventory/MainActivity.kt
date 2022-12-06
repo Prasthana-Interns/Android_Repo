@@ -9,7 +9,6 @@ import android.os.Bundle
 import android.view.View
 import com.example.inventory.ConstantsValues.Companion.passwordValue
 import kotlinx.android.synthetic.main.activity_main.*
-
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        tv.setOnClickListener {
+        signinBtn.setOnClickListener {
             val intent= Intent(this,AdminScreenOne::class.java)
             startActivity(intent)
         }
@@ -50,7 +49,7 @@ class MainActivity : AppCompatActivity() {
         val passwordText = binding.passwordTv.text.toString()
         if(passwordText.length < passwordValue)
         {
-            return "Minimum 2 characters password"
+            return "Minimum 4 characters password"
         }
         return null
 
@@ -72,7 +71,7 @@ class MainActivity : AppCompatActivity() {
         val empIdText = binding.empIdTv.text.toString()
         if(empIdText.length < passwordValue)
         {
-            return "Minimum 4 characters password"
+            return "Minimum 7 characters password"
         }
         return null
 
