@@ -1,4 +1,5 @@
 package com.example.inventory
 
-class MyData : ArrayList<MyDataItem>() {
+class MyData  {
+//    : ArrayList<>()
 }

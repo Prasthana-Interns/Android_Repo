@@ -27,39 +27,39 @@ class AddEmployee : AppCompatActivity() {
         adesignationFocusListener()
         aphoneNumberFocusListener()
         aEmpIdFocusListener()
-        val list: MutableList<String> = ArrayList()
+//        val list: MutableList<String> = ArrayList()
+//
+//        list.add("admin")
+//        list.add("employee")
+//        val adapter = ArrayAdapter(
+//            this,
+//            R.layout.support_simple_spinner_dropdown_item, list
+//        )
+//        spnTest.adapter = adapter
+//        spnTest.onItemSelectedListener=object : AdapterView.OnItemSelectedListener {
+//            override fun onItemSelected(
+//                parent: AdapterView<*>?,
+//                view: View?,
+//                position: Int,
+//                id: Long
+//            ) {
+//                val item: String = list[position]
+//                Toast.makeText(this@AddEmployee, "$item selected", Toast.LENGTH_SHORT).show()
+//            }
 
-        list.add("admin")
-        list.add("employee")
-        val adapter = ArrayAdapter(
-            this,
-            R.layout.support_simple_spinner_dropdown_item, list
-        )
-        spnTest.adapter = adapter
-        spnTest.onItemSelectedListener=object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
-                val item: String = list[position]
-                Toast.makeText(this@AddEmployee, "$item selected", Toast.LENGTH_SHORT).show()
-            }
+//            override fun onNothingSelected(p0: AdapterView<*>?) {
+//            }
 
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-            }
-
-        }
-        limitDropDownHeight(spnTest)
-    }
-    private fun limitDropDownHeight(spnTest: Spinner) {
-        val popup: Field = Spinner::class.java.getDeclaredField("mPopup")
-        popup.isAccessible = true
-        val popupWindow: ListPopupWindow = popup.get(spnTest) as ListPopupWindow
-        popupWindow.height = (ConstantsValues.spinnerHeightValue * resources.displayMetrics.density).toInt()
-
-    }
+//        }
+//        limitDropDownHeight(spnTest)
+//    }
+//    private fun limitDropDownHeight(spnTest: Spinner) {
+//        val popup: Field = Spinner::class.java.getDeclaredField("mPopup")
+//        popup.isAccessible = true
+//        val popupWindow: ListPopupWindow = popup.get(spnTest) as ListPopupWindow
+//        popupWindow.height = (ConstantsValues.spinnerHeightValue * resources.displayMetrics.density).toInt()
+//
+   }
     private fun addEmployeeForm() {
         binding.aEEMPIDReq.helperText = validEmail()
         binding.aEPhoneReq.helperText = validEmail()

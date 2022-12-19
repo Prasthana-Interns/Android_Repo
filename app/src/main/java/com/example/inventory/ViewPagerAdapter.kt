@@ -20,5 +20,4 @@ public class ViewPagerAdapter(fragmentManager: FragmentManager, lifecycle: Lifec
         }
         return FragmentThree()
     }
-
 }

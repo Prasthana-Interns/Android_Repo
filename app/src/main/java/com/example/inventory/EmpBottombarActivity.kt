@@ -7,10 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.inventory.databinding.ActivityEmpBottombarBinding
-import com.example.inventory.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.activity_emp_details_screen.*
 import kotlinx.android.synthetic.main.emp_bottom_bar_view.*
 
-class Emp_Bottombar_Activity : AppCompatActivity() {
+class EmpBottombarActivity : AppCompatActivity() {
     private lateinit var binding: ActivityEmpBottombarBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,17 +19,12 @@ class Emp_Bottombar_Activity : AppCompatActivity() {
         setContentView(R.layout.activity_emp_bottombar)
         assign.setOnClickListener{
             var intent=Intent(this,AdminScreenOne::class.java)
+            empIdDt.text = intent.getStringExtra("id")
+            empDesignationDt.text=intent.getStringExtra("designation")
+            empEmailDt.text=intent.getStringExtra("email")
+            empNameDt.text=intent.getStringExtra("name")
+            empDesignationDt.text=intent.getStringExtra("designation")
+            nameIconDt.text=intent.getStringExtra("nameIcon")
         }
     }
-       fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
-        ): View? {
-            return inflater.inflate(R.layout.activity_emp_bottombar, container, false)
-
-        }
-
-
-
-
-    }
+}

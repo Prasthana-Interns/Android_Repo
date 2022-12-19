@@ -1,17 +1,12 @@
 package com.example.inventory
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.bottomsheet.BottomSheetDialog
-import kotlinx.android.synthetic.main.fragment_employee.*
-import android.widget.Toast.makeText as toastMakeText
+import kotlinx.android.synthetic.main.fragment_devices.*
 
 class DevicesFragment : Fragment() {
         private var DevicesDetails: ArrayList<DevicesData>? = null
@@ -52,11 +47,10 @@ class DevicesFragment : Fragment() {
 
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
         super.onViewCreated(itemView, savedInstanceState)
-        recyclerView.setHasFixedSize(true)
-        recyclerView.layoutManager = LinearLayoutManager(activity)
+        dfrecyclerView.setHasFixedSize(true)
+        dfrecyclerView.layoutManager = LinearLayoutManager(activity)
         DevicesDetails = ArrayList()
-        DevicesDetails?.add(
-            DevicesData(
+        DevicesDetails?.add(DevicesData(
                 "Macbook Pro 13",
                 "Laya Boini",
                 "Laptop",
@@ -146,6 +140,6 @@ class DevicesFragment : Fragment() {
             )
         )
         DeviceAdapter = DevicesRecyclerViewAdapter(DevicesDetails!!)
-        recyclerView.adapter = DeviceAdapter
+        dfrecyclerView.adapter = DeviceAdapter
     }
 }

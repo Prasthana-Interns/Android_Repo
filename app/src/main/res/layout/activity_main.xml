@@ -26,7 +26,7 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         />
-    <androidx.appcompat.widget.AppCompatEditText
+    <EditText
         android:id="@+id/empIdTv"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -41,14 +41,14 @@
         android:inputType="text"
         />
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/empReq"
+        android:id="@+id/empIdReq"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:helperText="@string/empReq"
         app:helperTextTextColor="#FFEA0E0E"
         android:layout_marginLeft="55dp"/>
 
-    <androidx.appcompat.widget.AppCompatEditText
+<EditText
         android:id="@+id/passwordTv"
         android:layout_width="300dp"
         android:layout_height="50dp"

@@ -21,8 +21,8 @@
     <string name="pReq"></string>
     <string name="dReq"></string>
     <string name="roleReq"></string>
-    <string name="empReq" />
-    <string name="pass1Req" />
+    <string name="empReq"></string>
+    <string name="pass1Req"></string>
     <!-- TODO: Remove or change this placeholder text -->
     <!--    <string name="hello_blank_fragment">Hello blank fragment</string>-->
     <string name="log">log in to your account</string>
